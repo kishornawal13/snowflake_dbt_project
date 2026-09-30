@@ -1,0 +1,10 @@
+snowflake_dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: MY_LEARNING_DB
+      schema: MY_SCHEMA
+      threads: 8
