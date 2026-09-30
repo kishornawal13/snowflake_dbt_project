@@ -16,4 +16,9 @@ snapshot-paths:
   - snapshots
 models:
   snowflake_dbt_project:
-    +materialized: view
+    bronze:
+      +materialized: table
+      schema: bronze
+    silver:
+      +materialized: view
+      schema: silver
