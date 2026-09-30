@@ -1,4 +1,4 @@
 select 
 * 
 from 
-{{source('raw','orders')}}
+{{source('raw','employees')}}

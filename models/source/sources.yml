@@ -1,6 +1,6 @@
 sources:
   - name: raw
-    database: my_learning_db  
+    ##database: my_learning_db  
     schema: my_schema  
     tables:
       - name: employees
