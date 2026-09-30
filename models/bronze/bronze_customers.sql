@@ -1,4 +1,5 @@
 SELECT 
 * 
 FROM 
-MY_LEARNING_DB.MY_SCHEMA.CUSTOMERS
+
+{{source('raw','customers')}}

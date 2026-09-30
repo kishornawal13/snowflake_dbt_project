@@ -1,0 +1,13 @@
+sources:
+  - name: raw
+    database: my_learning_db  
+    schema: my_schema  
+    tables:
+      - name: employees
+      - name: customers
+      - name: dates
+      - name: orders
+      - name: orderitems
+      - name: products
+      - name: stores
+      - name: suppliers
