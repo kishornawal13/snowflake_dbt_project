@@ -1,0 +1,36 @@
+version: 2
+
+models:
+ - name: bronze_customers
+   columns:
+      - name: customerid
+        data_tests:
+          - not_null
+          - unique
+          
+ - name: bronze_employees
+   columns:
+    - name:  employeeid
+      data_tests:
+        - not_null
+        - unique
+                
+ - name: bronze_orderitems
+   columns:
+    - name: productid
+      data_tests:
+        - generic_non_negative:
+            column_name: productid
+            to: "{{ ref('bronze_products') }}"
+            field: productid          
+ 
+ - name: bronze_products
+   columns:
+    - name: productid
+      data_tests:
+        - unique
+        - not_null
+    - name: category
+      data_tests:
+        - accepted_values:
+            values: ['Sports','Clothing','Books','Electronics','Beauty','Foods','Toys','Home Decor']      
